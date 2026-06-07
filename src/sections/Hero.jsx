@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { Link } from 'react-scroll';
 import { ChevronDown, Download, Eye, Mail } from 'lucide-react';
+import profilePhoto from '../assets/profile.jpeg';
 
 function ParticleCanvas() {
   const canvasRef = useRef(null);
@@ -299,14 +300,7 @@ export default function Hero() {
 
               {/* Profile image container */}
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-2 border-cyan-400/30 shadow-neon-blue float-animation">
-                {/* Placeholder gradient avatar */}
-                <div className="w-full h-full bg-gradient-to-br from-dark-700 via-dark-600 to-dark-800 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="font-display text-7xl font-bold gradient-text mb-2">RK</div>
-                    <div className="font-mono text-xs text-slate-500 tracking-widest">PROFILE PHOTO</div>
-                    <div className="font-mono text-xs text-cyan-400/50 mt-1">[ Upload Here ]</div>
-                  </div>
-                </div>
+                <img src={profilePhoto} alt="Profile" className="w-full h-full object-cover" />
 
                 {/* Scan overlay */}
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-400/5 to-transparent animate-scan-line pointer-events-none" />
